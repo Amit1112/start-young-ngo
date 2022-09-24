@@ -15,14 +15,14 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.titleService.setTitle("Start Young UK");
-    this.metaTagService.addTags([
-      {
-        name: 'keywords',
-        content: 'Start Young UK, Charity Start Young UK, Start Young UK NGO, UK best NGO, best ngo, best charity, top charities UK, young uk',
-      },
-      { name: 'description', content: 'Start Young Uk - Start Young UK' },
-      { name: 'robots', content: 'index, follow' },
-      { name: 'author', content: 'Start Young UK' },
-    ]);
+    // this.metaTagService.addTags([
+    //   {
+    //     name: 'keywords',
+    //     content: 'Start, Young, Uk, Start Young UK, Charity Start Young UK, Start Young UK NGO, UK best NGO, best ngo, best charity, top charities UK, young uk',
+    //   },
+    //   { name: 'description', content: 'Start Young Uk - Start Young UK' },
+    //   { name: 'robots', content: 'index, follow' },
+    //   { name: 'author', content: 'Start Young UK' },
+    // ]);
   }
 }
