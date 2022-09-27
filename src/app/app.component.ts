@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Title, Meta } from '@angular/platform-browser';
+import { DashboardService } from './services/dashboard.service';
 
 @Component({
   selector: 'app-root',
@@ -8,10 +9,12 @@ import { Title, Meta } from '@angular/platform-browser';
 })
 export class AppComponent implements OnInit {
   title = 'start-young-uk';
+  aboutInfo: string = '';
 
   constructor(
     private titleService: Title,
-    private metaTagService: Meta) { }
+    private metaTagService: Meta,
+    private dashboardService: DashboardService) { }
 
   ngOnInit() {
     this.titleService.setTitle("Start Young UK");
@@ -24,5 +27,8 @@ export class AppComponent implements OnInit {
     //   { name: 'robots', content: 'index, follow' },
     //   { name: 'author', content: 'Start Young UK' },
     // ]);
+    this.dashboardService.getAboutUsInfo().subscribe((data) => {
+      this.aboutInfo = data.text;
+    });
   }
 }
