@@ -27,7 +27,7 @@ export class AppComponent implements OnInit {
     //   { name: 'robots', content: 'index, follow' },
     //   { name: 'author', content: 'Start Young UK' },
     // ]);
-    this.dashboardService.getAboutUsInfo().subscribe((data) => {
+    this.dashboardService.getAboutUsInfo().subscribe((data: any) => {
       this.aboutInfo = data.text;
     });
   }
